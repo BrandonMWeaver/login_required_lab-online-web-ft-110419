@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
     return session[:name]
   end
   
+  private
+  
   def verify_logged_in
     return redirect_to login_path unless session.include? :name
   end
